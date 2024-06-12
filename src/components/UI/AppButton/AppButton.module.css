@@ -1,0 +1,24 @@
+.AppButton {
+    display: flex;
+    border: 1px solid #EAEAEA;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #919191;
+    font-weight: 500;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+    gap: 10px;
+}
+
+.AppButton.active {
+    border: 1px solid #000;
+    color: #000;
+}
+
+.AppButton:hover {
+    border: 1px solid #000;
+    color: #000;
+}

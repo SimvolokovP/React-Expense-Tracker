@@ -1,0 +1,276 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+padding: 0;
+overflow: hidden;
+border: 0;
+clip: rect(0 0 0 0);
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+body {
+  background-color: #DFE0E2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #000;
+  font-style: normal;
+}
+
+body, #root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  padding: 10px;
+  border-radius: 16px;
+  background-color: #fff;
+  width: 480px;
+}
+
+.adder-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.adder-panel__title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.card-swiper {
+  width: 100%;
+  padding-right: 10px;
+}
+
+.card {
+  width: 94%;
+  padding: 24px 12px;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__status {
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+.card__status div {
+  color: #fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.card__body span {
+  color: #919191;
+  font-size: 16px;
+}
+
+.card__sum {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.swiper-button-next {
+  position: absolute;
+  bottom: 10px !important;
+  right: 10px !important;
+  top: 80% !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  border: 2px solid #EAEAEA;
+  padding: 10px !important;
+  width: 35px !important;
+  height: 35px !important;
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 25px !important;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  bottom: 10px !important;
+  right: 10px !important;
+  top: 80% !important;
+  left: 80% !important;
+}
+
+.card__descr {
+  display: flex;
+  gap: 10px;
+}
+
+.card__logo {
+  width: 40px;
+}
+
+.add-form {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-form__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.add-form__label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.add-form__input {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid #EAEAEA;
+  font-weight: 500;
+  color: #919191;
+}
+
+.add-form__input::placeholder {
+  color: #919191;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.app-page__not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  border: 2px solid #EAEAEA;
+  border-radius: 16px;
+}
+
+.card__actions {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card__remove, .card__edit {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tabs {
+  margin-top: 20px;
+}
+
+.tabs__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tab-btn {
+  display: flex;
+  border: 1px solid #EAEAEA;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #919191;
+  font-weight: 500;
+  background-color: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .3s ease-in-out;
+  gap: 10px;
+}
+
+.tab-btn.active {
+  border: 1px solid #000;
+  color: #000;
+}
+
+.tab-btn:hover {
+  border: 1px solid #000;
+  color: #000;
+}
